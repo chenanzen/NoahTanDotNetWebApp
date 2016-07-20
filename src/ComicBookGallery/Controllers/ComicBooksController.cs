@@ -23,10 +23,7 @@ namespace ComicBookGallery.Controllers
                 "Letters: Chris Eliopoulos"
             };
 
-            //string connstring = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            //return Content(connstring);
             return View();
-
         }
     }
 }
