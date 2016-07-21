@@ -11,6 +11,9 @@ namespace ComicBookGallery.Controllers
     {
         public ActionResult Detail()
         {
+            string connstring = Models.Parameter.TimeFrameToCancelReturn.ToString();
+            ViewBag.ConnectionString = connstring;
+
             ViewBag.SeriesTitle = "The Amazing Spider-Man";
             ViewBag.IssueNumber = 700;
             ViewBag.Description = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>";
@@ -23,10 +26,7 @@ namespace ComicBookGallery.Controllers
                 "Letters: Chris Eliopoulos"
             };
 
-            //string connstring = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            //return Content(connstring);
             return View();
-
         }
     }
 }
